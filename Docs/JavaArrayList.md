@@ -123,3 +123,33 @@ for (int i = 0; i < fruits.size(); i++) {
 }
 ```
 
+## 6. Sắp xếp ArrayList (Sorting)
+
+Để sắp xếp một `ArrayList`, bạn có thể dùng `Collections.sort()` hoặc phương thức `sort()` của chính `ArrayList`.
+
+### Sắp xếp theo thứ tự tự nhiên
+Sử dụng `Collections.sort()` cho các kiểu dữ liệu cơ bản như `String` hoặc `Integer`.
+
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+
+ArrayList<String> names = new ArrayList<>();
+names.add("John");
+names.add("Alice");
+names.add("Bob");
+
+// Sắp xếp theo alphabet
+Collections.sort(names); // ["Alice", "Bob", "John"]
+```
+
+### Sắp xếp tùy chỉnh với Comparator
+Sử dụng `list.sort(Comparator)` để sắp xếp các đối tượng phức tạp.
+
+```java
+// Giả sử bạn có một lớp 'Player' với trường 'score'
+// players.sort(Comparator.comparing(Player::getScore));
+
+// Sắp xếp ngược (điểm cao nhất trước)
+// players.sort(Comparator.comparing(Player::getScore).reversed());
+```
